@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT CIO - Arsitektur Inovatif</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di PT CIO</h1>
+        <p>Perusahaan Arsitektur Terbaik di Indonesia</p>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <h2>Explore Desain Arsitektur Kami</h2>
+            <img src="image1.jpg" alt="Gambar Arsitektur 1" class="animated-image" data-link="about.php">
+            <img src="image2.jpg" alt="Gambar Arsitektur 2" class="animated-image" data-link="about.php">
+            <!-- Tambahkan lebih banyak gambar jika diperlukan -->
+        </section>
+        
+        <section id="counter">
+            <?php include 'counter.php'; ?>  <!-- Ini akan menampilkan dan increment counter -->
+        </section>
+        
+        <a href="about.php">Lihat Tentang Kami</a>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 PT CIO. All rights reserved.</p>
+    </footer>
+</body>
+</html>
