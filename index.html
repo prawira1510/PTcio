@@ -1,35 +1,1032 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT CIO - Arsitektur Inovatif</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Selamat Datang di PT CIO</h1>
-        <p>Perusahaan Arsitektur Terbaik di Indonesia</p>
-    </header>
-    
-    <main>
-        <section id="hero">
-            <h2>Explore Desain Arsitektur Kami</h2>
-            <img src="image1.jpg" alt="Gambar Arsitektur 1" class="animated-image" data-link="about.php">
-            <img src="image2.jpg" alt="Gambar Arsitektur 2" class="animated-image" data-link="about.php">
-            <!-- Tambahkan lebih banyak gambar jika diperlukan -->
-        </section>
-        
-        <section id="counter">
-            <?php include 'counter.php'; ?>  <!-- Ini akan menampilkan dan increment counter -->
-        </section>
-        
-        <a href="about.php">Lihat Tentang Kami</a>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 PT CIO. All rights reserved.</p>
-    </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PT CIO - Arsitektur & Kontraktor Profesional</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+  <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+    <img src="img/logo_pt-cio.png" alt="Logo PT CIO" class="logo me-2">
+    PT CIPTA INFRA OPTIMA
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+      <li class="nav-item"><a class="nav-link" href="#documentation">Dokumentasi</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+    </ul>
+  </div>
+</div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+    <div class="container text-center hero-content">
+        <div class="hero-box">
+        <h1>Membangun Ruang, Mewujudkan Impian<br>Bersama PT CIO</h1>
+        <p>
+            PT CIO menghadirkan karya arsitektur dan konstruksi yang dirancang dengan ketelitian, kreativitas, dan ketepatan struktur. 
+            Kami percaya setiap bangunan memiliki cerita mulai dari konsep hingga wujud nyata yang menghadirkan kenyamanan dan kebanggaan 
+            bagi penggunanya. Bersama kami, wujudkan ruang yang tidak hanya berdiri megah, tetapi juga bermakna dan berdaya guna.
+        </p>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- About Section -->
+<section id="about" class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-start g-5">
+      
+      <!-- Gambar di kiri -->
+      <div class="col-lg-6">
+        <img src="img/about_ciologo.jpg" alt="Helm PT CIO" style="width: 300px; height: 100%; border-radius: 10px;">
+      </div>
+
+      <!-- Teks di kanan -->
+      <div class="col-lg-6">
+        <h2 class="fw-bold mb-4">PT CIPTA INFRA OPTIMA</h2>
+        <p class="text-muted mb-5">General Contractor</p>
+
+        <div class="about-item d-flex align-items-start mb-4">
+          <img src="img/icon_profesional.png" alt="Profesional" class="icon-about me-2">
+          <div>
+            <h5 class="fw-bold mb-1">Profesional</h5>
+            <p class="text-muted mb-0">Profesionalitas dalam kerja sebagai jaminan bagi integritas perusahaan.</p>
+          </div>
+        </div>
+
+        <div class="about-item d-flex align-items-start mb-4">
+          <img src="img/icon_mutu.png" alt="Mutu" class="icon-about me-3">
+          <div>
+            <h5 class="fw-bold mb-1">Mutu</h5>
+            <p class="text-muted mb-0">Menempatkan jaminan mutu dalam setiap karya dan kepuasan klien sebagai orientasi utama.</p>
+          </div>
+        </div>
+
+        <div class="about-item d-flex align-items-start mb-4">
+          <img src="img/icon_inovasi.png" alt="Inovasi" class="icon-about me-3">
+          <div>
+            <h5 class="fw-bold mb-1">Inovasi</h5>
+            <p class="text-muted mb-0">Berpartisipasi dalam pembangunan melalui jasa konstruksi.</p>
+          </div>
+        </div>
+
+        <div class="about-item d-flex align-items-start mb-4">
+          <img src="img/icon_efisiens.png" alt="Efisiensi" class="icon-about me-3">
+          <div>
+            <h5 class="fw-bold mb-1">Efisiensi & Tepat Biaya</h5>
+            <p class="text-muted mb-0">Menerapkan manajemen mutu serta pengendalian waktu dan biaya secara efisien.</p>
+          </div>
+        </div>
+
+        <div class="about-item d-flex align-items-start">
+          <img src="img/icon-lingkungan.png" alt="Ramah Lingkungan" class="icon-about me-3">
+          <div>
+            <h5 class="fw-bold mb-1">Ramah Lingkungan</h5>
+            <p class="text-muted mb-0">Membangun tanpa mengabaikan orientasi bagi keramahan lingkungan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Section Planning - Design - Construction -->
+<section id="planning-section" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Tahapan Proyek Kami</h2>
+
+    <!-- Perencanaan -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="img/planning.png" alt="Perencanaan" class="img-fluid rounded shadow process-img">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold text-black mb-3">Perencanaan <br> (planning)</h3>
+        <p class="text-muted">
+          Kami memulai setiap proyek dengan analisis mendalam terhadap kebutuhan dan visi klien. 
+          Setiap rencana disusun secara matang untuk memastikan keakuratan dan efisiensi pelaksanaan proyek.
+        </p>
+      </div>
+    </div>
+
+    <!-- Desain -->
+    <div class="row align-items-center flex-md-row-reverse mb-5">
+      <div class="col-md-6">
+        <img src="img/design.jpg" alt="Desain" class="img-fluid rounded shadow process-img">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold text-black mb-3">Desain <br> (design)</h3>
+        <p class="text-muted">
+          Kami menghadirkan desain yang inovatif dan modern, 
+          memadukan keindahan visual dengan fungsi yang maksimal agar sesuai dengan kebutuhan klien.
+        </p>
+      </div>
+    </div>
+
+    <!-- Pembangunan -->
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="img/construction.jpg" alt="Pembangunan" class="img-fluid rounded shadow process-img">
+      </div>
+      <div class="col-md-6">
+        <h3 class="fw-bold text-black mb-3">Pembangunan <br> (construction)</h3>
+        <p class="text-muted">
+          Proses pembangunan dilakukan dengan profesionalisme tinggi, 
+          menggunakan material berkualitas dan tenaga ahli untuk menghasilkan hasil akhir yang presisi dan tahan lama.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+   <!-- Legalitas Section (Gambar Saja) -->
+<section id="legalitas" class="py-5 bg-white">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">Legality PT CIPTA INFRA OPTIMA</h2>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality1.png" alt="Legalitas 1" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality2.png" alt="Legalitas 2" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality3.png" alt="Legalitas 3" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality4.png" alt="Legalitas 4" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality5.png" alt="Legalitas 5" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality6.png" alt="Legalitas 6" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality7.png" alt="Legalitas 7" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality8.png" alt="Legalitas 8" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality9.png" alt="Legalitas 9" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality10.png" alt="Legalitas 10" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality11.png" alt="Legalitas 11" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality12.png" alt="Legalitas 12" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality13.png" alt="Legalitas 13" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality14.png" alt="Legalitas 14" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality15.png" alt="Legalitas 15" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality16.png" alt="Legalitas 16" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality17.png" alt="Legalitas 17" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality18.png" alt="Legalitas 18" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality19.png" alt="Legalitas 19" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality20.png" alt="Legalitas 20" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality21.jpg" alt="Legalitas 21" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality22.jpg" alt="Legalitas 22" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality23.png" alt="Legalitas 23" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality24.png" alt="Legalitas 24" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <img src="img/legality25.png" alt="Legalitas 25" class="img-fluid legalitas-img rounded shadow-sm">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pengalaman Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Pengalaman Proyek (Project Experience)</h2>
+    <div class="row g-4">
+
+      <!-- Kartu Proyek -->
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman1.png" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Fine Grading Kawasan OCBD</h5>
+            <p>Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman2.png" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Boulevard Kawasan OCBD</h5>
+            <p>Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman3.png" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pembangunan Jalan, Saluran, dan Penerangan Jalan Umum Area Akses Toll Borr Kawasan OCBD</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman4.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pembangunan Jalan, Saluran, dan Penerangan Jalan Umum Area Akses Toll Borr (Boulevard)</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman5.jpg" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Rehabilitasi Jembatan Cijalarang</h5>
+            <p>Kementerian PUPR</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman6.jpg" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pemeliharaan Berkala Jalan dan Jembatan</h5>
+            <p>PUPR Provinsi Banten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman7.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Preservasi Jalan Pasirkuray Cisitu-Cikidang (Desa Cipta Gelar)</h5>
+            <p>Kementerian PUPR Banten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman8.jpg" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Rehabilitasi Jembatan Muara Binuangeun</h5>
+            <p>Kementerian PUPR</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman9.jpg" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pematangan Lahan Cluster PG4 di Kawasan OCBD</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman10.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pengaspalan, Pagar Beton Akses Toll Borr di Kawasan OCBD</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman11.jpg" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Retaining Wall & Pagar Panel Cluster PG4 di Kawasan OCBD</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman12.jpg" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Penanganan Longsor Jalan Cipanas - Cikumpay</h5>
+            <p>Dinas PUPR Banten</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman13.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Perbaikan Plat dan Rangka Jembatan Cisadane</h5>
+            <p>Dinas PUPR Provinsi Banten Teluk Naga, Kabupaten Tangerang</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman14.png" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Perumahan Elite CIO Residence</h5>
+            <p>PT. Karabha Digdaya Depok, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman15.png" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pembangunan 26 Unit Rumah di Kawasan OCBD Bogor</h5>
+            <p>PT. Olympic Bangun Persada Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman16.png" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Finishing Kantor Engineering Pengelola Condo</h5>
+            <p>Agung Podomoro Land Jakarta Utara, DKI Jakarta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman17.png" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Infrastruktur Jalan dan Saluran Umma Arsa</h5>
+            <p>PT. Karabha Digdaya Depok, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman18.jpg" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Perapihan Dinding GWT Mall (Area Chiller)</h5>
+            <p>PT. Kencana Unggul Sukses Jakarta Utara, DKI Jakarta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman19.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Pagar Panel Cluster Northern Pine di Kawasan OCBD</h5>
+            <p>OCBD, Bogor</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman20.png" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Bongkar dan Pasang Kembali Aluminium Composite Panel (ACP) dan Curtain Wall (CW)</h5>
+            <p>PT. Kencana Unggul Sukses Jakarta Utara, DKI Jakarta</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman21.png" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pagar Holding Area B2 Section 1</h5>
+            <p>PT. Kharisma Tangguh Persada Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman22.jpg" alt="Gedung Perkantoran Modern" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Infrastruktur Jalan Tembus dan Cluster Eksisting</h5>
+            <p>PT. Kharisma Tangguh Persada Bogor, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/Pengalaman23.png" alt="Perumahan Elite CIO Residence" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Pekerjaan Akses Marketing Galery</h5>
+            <p>PT. Mitra Bangun Prasada (MBP) Depok, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="project-card">
+          <img src="img/pengalaman24.png" alt="Renovasi Mall Central Park" />
+          <div class="project-info text-center">
+            <h5 class="fw-bold">Restaurant Sunda FNB CGE Avenue</h5>
+            <p>PT. Cakra Anugerah Jaya (CAJ) by MBP Depok, Jawa Barat</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sisanya tetap seperti strukturmu sebelumnya -->
+      <!-- Copy struktur kartu di atas dan ubah nama + gambar sesuai kebutuhan -->
+    </div>
+  </div>
+</section>
+
+    <!-- Documentation Section -->
+<section id="documentation" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="fw-bold text-center mb-5">Dokumentasi Pembangunan (Project Documentation)</h2>
+
+    <div id="dokumentasiCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Item 1 -->
+        <div class="carousel-item active text-center">
+          <img src="img/dok1.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 1">
+        </div>
+        <!-- Item 2 -->
+        <div class="carousel-item text-center">
+          <img src="img/dok2.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 2">
+        </div>
+        <!-- Item 3 -->
+        <div class="carousel-item text-center">
+          <img src="img/dok3.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 3">
+        </div>
+        <!-- Kamu bisa lanjut nambah di bawah ini -->
+        <div class="carousel-item text-center">
+          <img src="img/dok4.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 4">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok5.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok6.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok7.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok8.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok9.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok10.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok11.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok12.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok13.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok14.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok15.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok16.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok17.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok18.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok19.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok20.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok21.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok22.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok23.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok24.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok25.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok26.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok27.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok28.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok29.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok30.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok31.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok32.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok33.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok34.png" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok35.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok36.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok37.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok38.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok39.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok40.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok41.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok42.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok43.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok44.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok45.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok46.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok47.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok48.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok49.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok50.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok51.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok52.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok53.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok54.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok55.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok56.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok57.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok58.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok59.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok60.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok61.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok62.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok63.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok64.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok65.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok66.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok67.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok68.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok69.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok70.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok71.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok72.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok73.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok74.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok75.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok76.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok77.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok78.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok79.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok80.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok81.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok82.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok83.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok84.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok85.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok86.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok87.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok88.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok89.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok90.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok91.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok92.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok93.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok94.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok95.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok96.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok97.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok98.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok99.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok100.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok101.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok102.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok103.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok104.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok105.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok106.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok107.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok108.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok109.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok110.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok111.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok112.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok113.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok114.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+        <div class="carousel-item text-center">
+          <img src="img/dok115.jpg" class="img-fluid rounded shadow-sm w-50" alt="Dokumentasi 5">
+        </div>
+
+
+        <!-- dst, bisa sampai dok63 -->
+      </div>
+
+      <!-- Navigasi panah -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#dokumentasiCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#dokumentasiCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+     <!-- Video Section -->
+<section id="company-video" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Video singkat dari PT CIPTA INFRA OPTIMA</h2>
+    <p class="text-muted mb-4">
+      Saksikan video singkat tentang komitmen dan dedikasi PT CIO dalam membangun karya arsitektur dan konstruksi yang berkelas.
+    </p>
+    <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+      <video controls poster="assets/img/thumbnail-video.jpg">
+        <source src="video/profile-ptcio1.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung pemutaran video.
+      </video>
+    </div>
+    <br>
+    <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+      <video controls poster="assets/img/thumbnail-video.jpg">
+        <source src="video/profile-ptcio2.mp4" type="video/mp4" />
+        Browser Anda tidak mendukung pemutaran video.
+      </video>
+    </div>
+  </div>
+</section>
+
+    <!-- Modal Zoom -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <img
+            src=""
+            class="img-fluid rounded"
+            id="modalImage"
+            alt="Zoom Foto"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Hubungi Kami</h2>
+        <p class="text-muted mb-5">
+          Kami siap membantu Anda dalam setiap langkah pembangunan dan desain
+          impian Anda.
+        </p>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="p-4 shadow-sm bg-white rounded">
+              <i class="bi bi-telephone-fill fs-2 text-black mb-3"></i>
+              <h5 class="fw-bold">Telepon</h5>
+              <p class="text-muted">(+62) 812-1115-5008</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="p-4 shadow-sm bg-white rounded">
+              <i class="bi bi-envelope-fill fs-2 text-black mb-3"></i>
+              <h5 class="fw-bold">Email</h5>
+              <p class="text-muted">cipta.infra.optima@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="p-4 shadow-sm bg-white rounded">
+              <i class="bi bi-geo-alt-fill fs-2 text-black mb-3"></i>
+              <h5 class="fw-bold">Alamat Ofice</h5>
+              <p class="text-muted">
+                PT CIPTA INFRA OPTIMA <br>
+                Kec. Jatinegara, Jakarta Timur, DKI Jakarta 13930 - Indonesia
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer pt-5 pb-3 text-light">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Kolom 1: Profil -->
+      <div class="col-lg-3 col-md-6">
+        <h4 class="fw-bold text-black mb-3">PT <span class="text-black">CIO</span></h4>
+        <p>
+          Mewujudkan ruang dan konstruksi berkualitas tinggi dengan sentuhan kreativitas,
+          ketelitian, dan inovasi modern.
+        </p>
+      </div>
+
+      <!-- Kolom 2: Tautan Cepat -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#">Tentang Kami</a></li>
+          <li><a href="#">Proyek</a></li>
+          <li><a href="#">Layanan</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Layanan -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Layanan</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Arsitektur</a></li>
+          <li><a href="#">Konstruksi</a></li>
+          <li><a href="#">Desain Interior</a></li>
+          <li><a href="#">Perencanaan Proyek</a></li>
+          <li><a href="#">Konsultasi Teknis</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 4: Newsletter -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Newsletter</h5>
+        <p>Berlangganan untuk mendapatkan info proyek terbaru dari kami.</p>
+        <div class="input-group">
+          <input type="email" class="form-control" placeholder="Alamat Email Anda" />
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4 border-light opacity-25" />
+    <div class="text-center small">
+      &copy; 2025 <strong>PT CIO</strong>. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
