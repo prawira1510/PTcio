@@ -230,6 +230,30 @@ font-size: 0.9rem;
 display: inline-block;
 }
 
+/* --- TENTANG KAMI HEADER STYLING (Penambahan Baru) --- */
+.about-header {
+  /* Asumsi container ini akan memiliki background warna gelap di HTML Anda */
+  background: var(--bs-primary);
+  padding: 50px 0; 
+}
+
+/* Gaya untuk Judul Utama di bagian Tentang Kami */
+.about-header .section-title {
+  color: var(--bs-white); /* PERUBAHAN: Warna judul menjadi Putih */
+}
+
+/* Gaya untuk Subjudul/Deskripsi di bagian Tentang Kami */
+.about-header .section-subtitle {
+  color: var(--bs-white); /* PERUBAHAN: Warna subjudul/deskripsi menjadi Putih */
+  opacity: 0.8; 
+}
+
+/* JANGAN LUPA: Pastikan garis kuning di bawah judul juga terlihat di latar belakang gelap */
+.about-header .section-title::after {
+  background: var(--bs-secondary); /* Garis tetap Kuning Emas */
+}
+/* --- AKHIR TENTANG KAMI HEADER STYLING --- */
+
 
 /* ===== SERVICES SECTION - PERUBAHAN UKURAN IKON DI SINI ===== */
 .services-section {
