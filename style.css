@@ -199,7 +199,8 @@ section {
 }
 /* Deskripsi baru yang Anda tambahkan */
 .hero-description {
-    font-size: 1.1rem;
+    /* DEFAULT FONT SIZE, AKAN DITIMPA OLEH MEDIA QUERIES */
+    font-size: 1.25rem; /* DIUBAH DARI 1.1rem (Basis) */
     color: var(--bs-white);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     margin-bottom: 2rem; 
@@ -523,22 +524,22 @@ GAYA TAMBAHAN DARI PERMINTAAN USER (Collapse Projects)
 /* Icon Panah Toggle */
 /* CATATAN: Menggunakan .toggle-project-btn agar tidak bentrok dengan .toggle-partner-btn */
 .toggle-project-btn {
- font-size: 1.2rem;
- font-weight: 600;
- text-decoration: none;
- color: var(--bs-primary);
- transition: color 0.3s ease;
+font-size: 1.2rem;
+font-weight: 600;
+text-decoration: none;
+color: var(--bs-primary);
+transition: color 0.3s ease;
 }
 
 .toggle-project-btn:hover {
- color: var(--bs-secondary);
- text-decoration: none;
+color: var(--bs-secondary);
+text-decoration: none;
 }
 
 .toggle-icon {
- transition: transform 0.3s ease;
- font-size: 0.9em;
- vertical-align: middle;
+transition: transform 0.3s ease;
+font-size: 0.9em;
+vertical-align: middle;
 }
 
 /* Ketika area collapse terbuka, putar ikon panah 180 derajat */
@@ -594,23 +595,23 @@ Disarankan menggunakan .client-card atau .project-card-custom.
 /* BARU: PROJECT GALLERY (GAMBAR KONSISTEN & TOGGLE) */
 /* KUNCI: Menjaga Konsistensi Gambar (Horizontal & Vertikal) */
 .project-card-custom .card-img-top {
- /* Menetapkan tinggi yang konsisten untuk semua gambar */
- height: 250px; 
- 
- /* Memastikan gambar mengisi area yang ditetapkan tanpa distorsi
- dan memotong bagian gambar yang tidak muat. */
- object-fit: cover; 
- 
- /* Agar transisi lebih mulus jika ada perubahan gambar */
- transition: transform 0.3s ease; 
- 
- /* Menghilangkan margin atau padding bawaan */
- width: 100%; 
+/* Menetapkan tinggi yang konsisten untuk semua gambar */
+height: 250px; 
+
+/* Memastikan gambar mengisi area yang ditetapkan tanpa distorsi
+   dan memotong bagian gambar yang tidak muat. */
+object-fit: cover; 
+
+/* Agar transisi lebih mulus jika ada perubahan gambar */
+transition: transform 0.3s ease; 
+
+/* Menghilangkan margin atau padding bawaan */
+width: 100%; 
 }
 
 /* Efek zoom ringan saat kursor diarahkan ke card (opsional) */
 .project-card-custom:hover .card-img-top {
- transform: scale(1.02);
+transform: scale(1.02);
 }
 /* AKHIR BARU: PROJECT GALLERY */
 
@@ -708,19 +709,18 @@ MEDIA QUERIES (RESPONSIVE)
 @media (min-width: 992px) {
     .hero-title {
         /* Meningkatkan ukuran judul utama untuk Desktop */
-        font-size: 4.5rem; /* Dari 3.5rem (Default) menjadi 4.5rem */
+        font-size: 4.5rem; 
     }
     .hero-subtitle {
         /* Meningkatkan ukuran subjudul untuk Desktop */
-        font-size: 2.2rem; /* Dari 1.8rem (Default) menjadi 2.2rem */
+        font-size: 2.2rem; 
     }
     .hero-description {
-        /* Meningkatkan ukuran deskripsi agar lebih mudah dibaca */
-        font-size: 1.25rem; /* Dari 1.1rem (Default) menjadi 1.25rem */
+        /* PERUBAHAN: Ditingkatkan dari 1.25rem menjadi 1.4rem untuk membuatnya lebih besar */
+        font-size: 1.4rem; 
         max-width: 800px;
     }
     .hero-carousel {
-        /* Tambahkan sedikit tinggi agar Hero lebih mendominasi di desktop */
         height: 100vh;
     }
 }
@@ -798,7 +798,8 @@ MEDIA QUERIES (RESPONSIVE)
     font-size: 1.5rem; 
 }
 .hero-description {
-    font-size: 1rem;
+    /* PERUBAHAN: Ditingkatkan dari 1rem menjadi 1.1rem */
+    font-size: 1.1rem;
     max-width: 90%;
 }
 }
@@ -939,9 +940,9 @@ MEDIA QUERIES (RESPONSIVE)
         display: block !important; 
     }
     .hero-description {
-        /* PERBAIKAN: Memastikan Deskripsi Tampil di Mobile */
+        /* PERUBAHAN: Ditingkatkan dari 0.9rem menjadi 1rem */
         display: block !important; 
-        font-size: 0.9rem; /* Mengatur ukuran agar muat */
+        font-size: 1rem; 
         line-height: 1.4;
         max-width: 90%;
         margin-left: auto;
