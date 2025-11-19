@@ -6,6 +6,7 @@ Author: AI Assistant
 /* ===== VARIABLES & GLOBAL STYLES (Menggunakan --bs- prefix untuk konsistensi Bootstrap) ===== */
 
 :root {
+  /* Warna */
   --bs-primary: #121212; /* Hitam Gelap (Branding Kuat) */
   --bs-secondary: #ffb700; /* KUNING EMAS/SAFETY */
   --bs-accent: #333333; /* Hitam Aksesori */
@@ -14,9 +15,9 @@ Author: AI Assistant
   --bs-white: #fff;
   --bs-text: #000000; /* Warna Teks Global (Hitam Murni) */
   --bs-blue-dark: #1a4d6f; /* BARU: Biru Tua untuk Aksen Tombol/Branding */
-  /* BARU: Variabel Hijau untuk penanda Keberhasilan */
-  --bs-green-success: #008000;
+  --bs-green-success: #008000; /* BARU: Variabel Hijau untuk penanda Keberhasilan */
 
+  /* Efek */
   --shadow-card: 0 6px 15px rgba(0, 0, 0, 0.08);
   --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
@@ -47,14 +48,16 @@ body {
 /* Global Section Styling */
 
 section {
-  padding: 80px 0;
+  /* REVISI: Mengurangi padding vertikal agar jarak antar seksi/dengan hero lebih rapat */
+  padding: 50px 0;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--bs-text);
-  margin-bottom: 1rem;
+  /* REVISI: Mengurangi margin bawah judul */
+  margin-bottom: 0.5rem;
   text-align: center;
   position: relative;
 }
@@ -65,17 +68,17 @@ section {
   width: 80px;
   height: 4px;
   background: var(--bs-secondary);
-  margin: 15px auto;
+  /* REVISI: Mengurangi margin di atas dan bawah garis kuning */
+  margin: 10px auto;
   border-radius: 2px;
 }
 
 .section-subtitle {
-  color: var(
-    --bs-accent
-  ); /* PERBAIKAN: Menggunakan --bs-accent sebagai ganti #666 */
+  color: var(--bs-accent);
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 50px;
+  /* REVISI: Mengurangi margin di bawah sub-judul */
+  margin: 0 auto 30px;
   font-size: 1.1rem;
 }
 
@@ -119,13 +122,13 @@ section {
   color: var(--bs-primary);
 }
 
-/* BARU: Styling untuk Tombol Hero (Lihat Proyek Kami) */
+/* Styling untuk Tombol Hero */
 
 .btn-hero {
-  background-color: var(--bs-blue-dark); /* Menggunakan Biru Tua */
+  background-color: var(--bs-blue-dark);
   color: var(--bs-white);
-  padding: 15px 40px; /* Ukuran yang lebih besar */
-  border-radius: 5px; /* Bentuk sedikit kotak */
+  padding: 15px 40px;
+  border-radius: 5px;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -136,12 +139,11 @@ section {
 }
 
 .btn-hero:hover {
-  /* PERBAIKAN: Menggunakan variabel/warna yang lebih konsisten */
   background-color: #123e5a;
   transform: translateY(-2px);
 }
 
-/* ===== NAVBAR (Ditingkatkan untuk Mobile) ===== */
+/* ===== NAVBAR ===== */
 
 .navbar {
   transition: var(--transition);
@@ -176,7 +178,7 @@ section {
   color: var(--bs-primary) !important;
 }
 
-/* ===== HERO CAROUSEL (REVISI UKURAN TEKS & KONTEN) ===== */
+/* ===== HERO CAROUSEL ===== */
 
 .hero-carousel {
   height: 110vh;
@@ -193,23 +195,19 @@ section {
 }
 
 /* Kontainer untuk teks dan tombol di Hero */
-
-/* PERBAIKAN SENTRASI SEMPURNA */
-
 .hero-content {
   background: rgba(0, 0, 0, 0.4);
   display: flex;
-  flex-direction: column; /* Mengatur item dari atas ke bawah */
-  align-items: center; /* Sentrasi Horizontal */
-  justify-content: center; /* Sentrasi Vertikal */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
   height: 100%;
   padding: 0 20px;
 }
 
-/* --- UKURAN Teks Default (Desktop) --- */
-
+/* UKURAN Teks Default (Desktop) */
 .hero-title {
   font-size: 3.5rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
@@ -226,8 +224,6 @@ section {
   line-height: 1.3;
 }
 
-/* Deskripsi baru yang Anda tambahkan */
-
 .hero-description {
   font-size: 1.25rem;
   color: var(--bs-white);
@@ -237,27 +233,24 @@ section {
   line-height: 1.6;
 }
 
-/* ------------------------------------- */
-
 .hero-buttons {
   gap: 20px;
   display: flex;
   justify-content: center;
 }
 
-/* Carousel Controls & Indicators (DIHILANGKAN) */
-
+/* Carousel Controls & Indicators (TIDAK DIHILANGKAN DI CSS AGAR SWIPE BERFUNGSI) */
+/* Karena elemennya sudah dihapus dari HTML, aturan ini hanya sebagai catatan */
 .carousel-control-prev,
 .carousel-control-next {
-  display: none;
+  display: none; /* Menyembunyikan ikon panah */
 }
 
 .carousel-indicators {
-  display: none;
+  display: none; /* Menyembunyikan titik indikator */
 }
 
-/* BARU: Perbaikan Carousel Caption agar sentrasi vertikal berfungsi */
-
+/* Perbaikan Carousel Caption agar sentrasi vertikal berfungsi */
 .carousel-caption {
   position: absolute;
   top: 0;
@@ -280,13 +273,11 @@ section {
 }
 
 .about-item:hover {
-  /* PERBAIKAN: Menggunakan variabel/warna yang lebih konsisten */
   background: rgba(var(--bs-primary-rgb, 18, 18, 18), 0.08);
   transform: translateY(-3px);
 }
 
 /* Ikon/Gambar About Item Disesuaikan */
-
 .icon-about {
   width: 40px;
   height: 40px;
@@ -304,9 +295,7 @@ section {
 
 .about-item p {
   font-size: 0.85rem;
-  color: var(
-    --bs-accent
-  ); /* PERBAIKAN: Menggunakan --bs-accent sebagai ganti #666 */
+  color: var(--bs-accent);
   margin-top: 0;
   line-height: 1.3;
 }
@@ -316,30 +305,22 @@ section {
   display: inline-block;
 }
 
-/* --- TENTANG KAMI HEADER STYLING (FINAL FIX KEHILANGAN TEKS) --- */
+/* --- TENTANG KAMI HEADER STYLING --- */
 
 .about-header {
-  background: var(--bs-dark); /* Latar Belakang Hitam */
-  color: var(
-    --bs-white
-  ); /* BARU: Atur warna teks default di kontainer menjadi putih */
+  background: var(--bs-dark);
+  color: var(--bs-white);
   padding: 50px 0;
 }
 
-/* Gaya untuk Judul Utama di bagian Tentang Kami */
-
 .about-header .section-title {
-  color: var(--bs-white); /* Dipastikan Putih */
+  color: var(--bs-white);
 }
-
-/* Gaya untuk Subjudul/Deskripsi di bagian Tentang Kami */
 
 .about-header .section-subtitle {
-  color: rgba(255, 255, 255, 0.85); /* Teks Putih dengan sedikit transparansi */
+  color: rgba(255, 255, 255, 0.85);
   opacity: 1;
 }
-
-/* Garis kuning di bawah judul */
 
 .about-header .section-title::after {
   background: var(--bs-secondary);
@@ -347,7 +328,7 @@ section {
 
 /* --- AKHIR TENTANG KAMI HEADER STYLING --- */
 
-/* ===== SERVICES SECTION - PERUBAHAN UKURAN IKON DI SINI ===== */
+/* ===== SERVICES SECTION ===== */
 
 .services-section {
   background: var(--bs-light) !important;
@@ -355,9 +336,7 @@ section {
 
 .service-card {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: var(
-    --transition
-  ); /* PERBAIKAN: Menambahkan transisi ke card untuk efek hover yang halus */
+  transition: var(--transition);
 }
 
 .service-icon {
@@ -375,17 +354,16 @@ section {
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--shadow); /* PERBAIKAN: Menambahkan box-shadow saat hover */
+  box-shadow: var(--shadow);
 }
 
-/* ===== PLANNING SECTION (TIMELINE) - PERUBAHAN UKURAN IKON DI SINI ===== */
+/* ===== PLANNING SECTION (TIMELINE) ===== */
 
 .process-img:hover {
   transform: scale(1.01);
 }
 
 /* Garis Tengah Timeline */
-
 .timeline-container {
   position: relative;
   padding: 0 10px;
@@ -411,7 +389,6 @@ section {
 }
 
 /* Item Timeline */
-
 .timeline-item {
   padding: 10px 40px;
   position: relative;
@@ -419,7 +396,6 @@ section {
 }
 
 /* Penempatan Item */
-
 .timeline-item.left {
   left: 0;
 }
@@ -436,8 +412,7 @@ section {
   margin-right: 20px;
 }
 
-/* Ikon Timeline - PERUBAHAN UKURAN DI SINI */
-
+/* Ikon Timeline */
 .timeline-icon {
   width: 50px;
   height: 50px;
@@ -451,9 +426,7 @@ section {
   justify-content: center;
   box-shadow: 0 0 0 5px var(--bs-light);
   font-size: 1.2rem;
-  background-color: var(
-    --bs-primary
-  ); /* PERBAIKAN: Menambahkan warna latar belakang default */
+  background-color: var(--bs-primary);
 }
 
 .timeline-item.left .timeline-icon {
@@ -465,12 +438,10 @@ section {
 }
 
 /* Gaya Konten */
-
 .timeline-content {
   background-color: var(--bs-white);
   border-left: 3px solid var(--bs-primary);
   transition: var(--transition);
-  /* PERBAIKAN: Menambahkan padding agar konten tidak terlalu mepet */
   padding: 15px;
   border-radius: 4px;
 }
@@ -481,7 +452,6 @@ section {
 }
 
 /* Gambar dalam Timeline */
-
 .timeline-img {
   width: 40px;
   height: 40px;
@@ -503,7 +473,6 @@ Gaya untuk Section Klien & Mitra (Partners)
 }
 
 /* Gaya untuk CARD KLIEN BARU */
-
 .client-card {
   background-color: var(--bs-white);
   border-radius: 8px;
@@ -513,15 +482,12 @@ Gaya untuk Section Klien & Mitra (Partners)
   box-shadow: var(--shadow-card);
 }
 
-/* Efek Hover yang Profesional */
-
 .client-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Gaya untuk LOGO di dalam Card */
-
 .client-card .client-logo {
   max-height: 80px;
   width: auto;
@@ -532,15 +498,12 @@ Gaya untuk Section Klien & Mitra (Partners)
   transition: var(--transition);
 }
 
-/* Logo berubah warna saat di-hover pada card (menarik perhatian) */
-
 .client-card:hover .client-logo {
   filter: grayscale(0%);
   opacity: 1;
 }
 
 /* Styling untuk Detail Klien */
-
 .client-card h5 {
   color: var(--bs-primary);
   margin-bottom: 5px;
@@ -551,8 +514,7 @@ Gaya untuk Section Klien & Mitra (Partners)
   font-size: 0.9rem;
 }
 
-/* Badge status (Kuning Emas yang baru) */
-
+/* Badge status */
 .client-card .badge {
   background-color: var(--bs-secondary) !important;
   color: var(--bs-dark);
@@ -560,7 +522,6 @@ Gaya untuk Section Klien & Mitra (Partners)
 }
 
 /* Gaya untuk Tombol Navigasi Panah (Panah Bawah & Panah Atas) */
-
 .toggle-partner-btn {
   font-size: 2.5rem;
   color: var(--bs-primary);
@@ -584,30 +545,20 @@ Gaya untuk Section Klien & Mitra (Partners)
 GAYA TAMBAHAN DARI PERMINTAAN USER (Collapse Projects)
 ---------------------------------------------------- */
 
-/* Style Card Proyek Custom (Meniru card klien/mitra dari gambar) */
-
 .project-card-custom {
-  border-radius: 1rem; /* Sudut melengkung */
+  border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card-custom:hover {
-  transform: translateY(-5px); /* Efek sedikit terangkat saat hover */
+  transform: translateY(-5px);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Style Badge BAST (Jika menggunakan nama class .badge.bg-warning) */
-
 .badge.bg-warning {
-  background-color: var(
-    --bs-secondary
-  ) !important; /* PERBAIKAN: Menggunakan --bs-secondary agar konsisten dengan badge klien */
+  background-color: var(--bs-secondary) !important;
   color: var(--bs-dark);
 }
-
-/* Icon Panah Toggle */
-
-/* CATATAN: Menggunakan .toggle-project-btn agar tidak bentrok dengan .toggle-partner-btn */
 
 .toggle-project-btn {
   font-size: 1.2rem;
@@ -628,25 +579,22 @@ GAYA TAMBAHAN DARI PERMINTAAN USER (Collapse Projects)
   vertical-align: middle;
 }
 
-/* BARU: Rotasi yang dikontrol oleh JavaScript (yang menambahkan kelas .rotate) */
-
 .toggle-icon.rotate {
   transform: rotate(180deg);
 }
 
 .btn-link:hover .toggle-icon {
-  color: var(--bs-secondary); /* Warna hover sesuai aksen Anda */
+  color: var(--bs-secondary);
 }
 
 /* ----------------------------------------------------
-GAYA TAMBAHAN UNTUK LOGO KLIEN (PERMINTAAN TERBARU)
+GAYA TAMBAHAN UNTUK LOGO KLIEN
 ---------------------------------------------------- */
 
 .client-logo-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 15px; /* Sesuaikan padding jika perlu */
-  /* PERBAIKAN: Menambahkan transisi dan box-shadow agar terlihat konsisten */
+  padding: 15px;
   transition: var(--transition);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -658,10 +606,10 @@ GAYA TAMBAHAN UNTUK LOGO KLIEN (PERMINTAAN TERBARU)
 
 .client-logo-only {
   max-width: 100%;
-  max-height: 80px; /* Atur tinggi maksimum yang seragam untuk logo */
+  max-height: 80px;
   width: auto;
-  object-fit: contain; /* Memastikan logo tidak terdistorsi */
-  filter: grayscale(100%); /* PERBAIKAN: Menambahkan efek grayscale */
+  object-fit: contain;
+  filter: grayscale(100%);
   opacity: 0.8;
   transition: var(--transition);
 }
@@ -672,15 +620,15 @@ GAYA TAMBAHAN UNTUK LOGO KLIEN (PERMINTAAN TERBARU)
 }
 
 .client-logo-card h6 {
-  margin-top: 10px; /* Jarak antara logo dan nama PT */
-  font-size: 0.9rem; /* Ukuran font lebih kecil */
+  margin-top: 10px;
+  font-size: 0.9rem;
 }
 
 /* -------------------------------------------
 AKHIR Gaya Section Klien & Mitra (Partners)
 ------------------------------------------- */
 
-/* ===== PROJECTS SECTION (TIDAK DIUBAH) ===== */
+/* ===== PROJECTS SECTION ===== */
 
 .project-card:hover {
   transform: translateY(-5px);
@@ -694,8 +642,7 @@ AKHIR Gaya Section Klien & Mitra (Partners)
   background: var(--bs-secondary);
 }
 
-/* BARU: PROJECT GALLERY (GAMBAR KONSISTEN & TOGGLE) */
-
+/* PROJECT GALLERY (GAMBAR KONSISTEN & TOGGLE) */
 .project-card-custom .card-img-top {
   height: 250px;
   object-fit: cover;
@@ -703,16 +650,12 @@ AKHIR Gaya Section Klien & Mitra (Partners)
   width: 100%;
 }
 
-/* Efek zoom ringan saat kursor diarahkan ke card (opsional) */
-
 .project-card-custom:hover .card-img-top {
   transform: scale(1.02);
 }
 
-/* AKHIR BARU: PROJECT GALLERY */
-
 /* ----------------------------------------------------
-CSS BARU DARI PERMINTAAN ANDA (Efek Gambar & Modal)
+Efek Gambar & Modal
 ---------------------------------------------------- */
 
 .project-img {
@@ -724,42 +667,33 @@ CSS BARU DARI PERMINTAAN ANDA (Efek Gambar & Modal)
   transform: scale(1.03);
 }
 
-/* Kunci untuk Sentrasi Gambar di Modal */
-
 .modal-body {
-  /* Mengaktifkan Flexbox untuk Sentrasi */
   display: flex;
-  justify-content: center; /* Sentrasi Horizontal */
-  align-items: center; /* Sentrasi Vertikal */
+  justify-content: center;
+  align-items: center;
   min-height: 100%;
-  padding: 0; /* Hapus padding agar gambar bisa maksimal */
+  padding: 0;
 }
 
-/* Ukuran gambar di modal */
-
 #modalImage {
-  /* Mengatur batas maksimal agar gambar tidak melebihi viewport */
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
 }
 
-/* Tombol silang (X) yang DIPERBAIKI */
-
 .custom-close {
   position: absolute;
-  /* Ditempatkan di luar modal-content agar selalu bisa diklik */
   top: 15px;
   right: 15px;
-  z-index: 1060; /* PENTING: Harus lebih tinggi dari modal (z-index: 1055) */
+  z-index: 1060;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #121212; /* Warna ikon X */
+  color: #121212;
   border-radius: 50%;
   padding: 10px;
   font-size: 1rem;
   opacity: 0.8;
   transition: 0.2s;
-  border: none; /* Hapus border default tombol */
+  border: none;
   cursor: pointer;
 }
 
@@ -769,11 +703,7 @@ CSS BARU DARI PERMINTAAN ANDA (Efek Gambar & Modal)
   transform: scale(1.1);
 }
 
-/* ----------------------------------------------------
-AKHIR CSS BARU
----------------------------------------------------- */
-
-/* ===== DOCUMENTATION SECTION (TIDAK DIUBAH) ===== */
+/* ===== DOCUMENTATION SECTION ===== */
 
 #documentation {
   background: var(--bs-light) !important;
@@ -783,28 +713,27 @@ AKHIR CSS BARU
   max-width: 80%;
 }
 
-/* ===== CONTACT SECTION - PERUBAHAN UKURAN IKON DI SINI ===== */
+/* ===== CONTACT SECTION ===== */
 
 .contact-section {
   background: var(--bs-light) !important;
 }
 
 .contact-item:hover {
-  /* PERBAIKAN: Menggunakan variabel/warna yang lebih konsisten */
   background: rgba(var(--bs-primary-rgb, 18, 18, 18), 0.08);
   transform: translateX(3px);
 }
 
 .contact-item i {
   background: var(--bs-primary);
-  color: var(--bs-white); /* Dipastikan tetap Putih */
-  width: 60px; /* PERUBAHAN: Ukuran ikon diperbesar */
-  height: 60px; /* PERUBAHAN: Ukuran ikon diperbesar */
+  color: var(--bs-white);
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  font-size: 1.5rem; /* Tambahkan ini jika ikon adalah font/SVG */
+  font-size: 1.5rem;
 }
 
 .contact-form .form-control:focus {
@@ -812,7 +741,7 @@ AKHIR CSS BARU
   box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.25);
 }
 
-/* ===== VIDEO SECTION (TIDAK DIUBAH) ===== */
+/* ===== VIDEO SECTION ===== */
 
 .video-card:hover {
   transform: translateY(-5px);
@@ -827,7 +756,7 @@ AKHIR CSS BARU
   color: var(--bs-primary);
 }
 
-/* ===== FOOTER (TIDAK DIUBAH) ===== */
+/* ===== FOOTER ===== */
 
 .footer {
   background: var(--bs-dark);
@@ -867,25 +796,22 @@ AKHIR CSS BARU
 }
 
 .footer-bottom i {
-  color: #e74c3c; /* PERBAIKAN: Lebih baik menggunakan warna custom atau variabel jika ada */
+  color: #e74c3c;
 }
 
 /* --------------------------------------------------------------------------
-   GAYA UNTUK BLOK KEBERHASILAN LEBAK (DARI HTML INLINE)
+GAYA UNTUK BLOK KEBERHASILAN LEBAK
 -------------------------------------------------------------------------- */
 
-/* Styling Khusus untuk Blok Keberhasilan Lebak (Tambahan dari HTML Inline) */
+/* Styling Khusus untuk Blok Keberhasilan Lebak */
 #success-lebak .title-accent {
-  /* Menggunakan variabel hijau yang baru didefinisikan */
   color: var(--bs-green-success) !important;
 }
 
-/* Style untuk Judul Utama (PT Cipta Infra Optima) */
 #success-lebak .title-main {
   margin-bottom: 0 !important;
 }
 
-/* Style untuk Garis Kuning di bawah Judul */
 #success-lebak .title-line-custom {
   width: 100px;
   height: 4px;
@@ -894,47 +820,101 @@ AKHIR CSS BARU
   border-radius: 2px;
 }
 
-/* Style untuk Subjudul/Paragraf Deskripsi */
 #success-lebak .subtitle-custom {
   max-width: 100%;
   margin-left: 0;
 }
 
-/* Style untuk Gambar di dalam Card */
 #success-lebak .card img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* max-height: 400px; - Sudah ada di CSS global Anda, jadi tidak perlu diulang di sini */
 }
 
-/* Style untuk Teks Kecil di Card Footer */
 #success-lebak .card-body small {
   line-height: 1.3;
+}
+
+/* ==========================================================================
+GAYA BARU UNTUK GALERI SCROLL OTOMATIS (MARQUEE)
+========================================================================== */
+
+/* Container utama yang menyembunyikan konten di luar batasnya */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bs-primary);
+  padding: 1.5rem 0; /* Ukuran Marquee Dikecilkan */
+  white-space: nowrap;
+  transform: translateZ(0); /* Hardware Acceleration Fix */
+}
+
+/* Konten yang bergerak (menggabungkan set gambar asli dan duplikat) */
+.marquee-content {
+  display: inline-block;
+  animation: scroll-left 30s linear infinite; /* Kecepatan Dipercepat */
+}
+
+/* Menghentikan animasi saat hover */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Keyframes untuk mendefinisikan pergerakan (scroll) */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Styling untuk setiap kartu gambar */
+.image-card {
+  display: inline-block;
+  width: 250px; /* Lebar Kartu Dikecilkan */
+  margin-right: 1.25rem; /* Margin Diperjelas */
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease;
+  background-color: var(--bs-accent);
+}
+
+/* Styling untuk gambar di dalam kartu */
+.image-card img {
+  width: 100%;
+  height: 150px; /* Tinggi Gambar Dikecilkan */
+  object-fit: cover;
+  display: block;
+}
+
+/* Styling teks caption */
+.caption {
+  padding: 0.5rem;
+  background-color: var(--bs-accent);
+  color: var(--bs-light);
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 /* ==========================================================================
 MEDIA QUERIES (RESPONSIVE)
 ========================================================================== */
 
-/* ----------------------------------------------------
-PERBAIKAN UTAMA: MENYESUAIKAN UKURAN TEKS HERO DI PC/LAPTOP
-(Layar Lebih Besar dari 992px)
----------------------------------------------------- */
-
 @media (min-width: 992px) {
+  /* PERBAIKAN DESKTOP */
   .hero-title {
-    /* Meningkatkan ukuran judul utama untuk Desktop */
     font-size: 4.5rem;
   }
 
   .hero-subtitle {
-    /* Meningkatkan ukuran subjudul untuk Desktop */
     font-size: 2.2rem;
   }
 
   .hero-description {
-    /* PERUBAHAN: Ditingkatkan dari 1.25rem menjadi 1.4rem untuk membuatnya lebih besar */
     font-size: 1.4rem;
     max-width: 800px;
   }
@@ -942,17 +922,15 @@ PERBAIKAN UTAMA: MENYESUAIKAN UKURAN TEKS HERO DI PC/LAPTOP
   .hero-carousel {
     height: 100vh;
   }
+
+  .hero-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
-/* ----------------------------------------------------
-AKHIR PERBAIKAN DESKTOP
----------------------------------------------------- */
-
-/* Navbar Toggler dan Menu Dropdown di Tablet */
-
 @media (max-width: 991.98px) {
-  /* BARU: PENYESUAIAN HEADER MOBILE AGAR LEBIH RAMPING */
-
+  /* PENYESUAIAN HEADER MOBILE/TABLET */
   .navbar {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
@@ -966,15 +944,15 @@ AKHIR PERBAIKAN DESKTOP
   }
 
   .navbar-brand {
-    font-size: 1.3rem; /* Ukuran teks brand lebih kecil dari desktop */
+    font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .navbar-brand .logo {
-    height: 28px; /* Logo dibuat lebih kecil dari desktop (35px) */
+    height: 28px;
     width: auto;
-    margin-right: 8px; /* Jarak dengan teks diperkecil */
+    margin-right: 8px;
   }
 
   .navbar-toggler {
@@ -991,14 +969,10 @@ AKHIR PERBAIKAN DESKTOP
   .navbar-toggler-icon {
     width: 1.2em;
     height: 1.2em;
-    /* PERBAIKAN: Menggunakan URL encoded SVG agar warna sesuai dengan --bs-primary (#121212) */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23121212' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
-  /* AKHIR PENYESUAIAN HEADER MOBILE */
-
-  /* Penyesuaian lain yang sudah ada: */
-
+  /* Dropdown Menu */
   .navbar-nav .dropdown-menu {
     border: none;
     box-shadow: none;
@@ -1014,13 +988,11 @@ AKHIR PERBAIKAN DESKTOP
   }
 
   .navbar-nav .dropdown-item:hover {
-    /* PERBAIKAN: Menggunakan variabel/warna yang lebih konsisten */
     background-color: rgba(var(--bs-primary-rgb, 18, 18, 18), 0.1);
     color: var(--bs-primary) !important;
   }
 
   /* Penyesuaian Hero di Tablet/Mobile */
-
   .hero-title {
     font-size: 2.5rem;
   }
@@ -1037,11 +1009,11 @@ AKHIR PERBAIKAN DESKTOP
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 0;
+    /* REVISI: Mengurangi padding di mobile */
+    padding: 40px 0;
   }
 
   /* RESPONSIVE UNTUK CLIENT CARD */
-
   .client-card {
     padding: 20px !important;
   }
@@ -1053,8 +1025,6 @@ AKHIR PERBAIKAN DESKTOP
   .client-card .row > div.col-8 {
     padding-left: 10px !important;
   }
-
-  /* END CLIENT CARD */
 
   .hero-carousel {
     height: 80vh;
@@ -1107,7 +1077,6 @@ AKHIR PERBAIKAN DESKTOP
   }
 
   /* Responsive Mobile untuk Timeline */
-
   .timeline-container::after {
     left: 20px;
     display: block;
@@ -1120,13 +1089,11 @@ AKHIR PERBAIKAN DESKTOP
     left: 0 !important;
   }
 
-  /* PERBAIKAN: Memastikan Ikon Timeline di mobile tetap berada di tengah garis vertikal */
-
   .timeline-item .timeline-icon {
     left: 0;
-    right: auto; /* Mengganti right:-25px */
+    right: auto;
     margin-left: 0;
-    transform: translateX(-50%); /* Sentrasi pada posisi x=0 */
+    transform: translateX(-50%);
   }
 
   .timeline-item.right .timeline-content,
@@ -1148,18 +1115,26 @@ AKHIR PERBAIKAN DESKTOP
     display: block !important;
   }
 
-  /* BARU: PROJECT GALLERY - Penyesuaian Ketinggian Gambar di Mobile */
-
+  /* PROJECT GALLERY - Penyesuaian Ketinggian Gambar di Mobile */
   .project-card-custom .card-img-top {
     height: 180px;
   }
 
-  /* AKHIR BARU: PROJECT GALLERY */
+  /* Marquee Responsive */
+  .image-card {
+    width: 180px;
+    margin-right: 1rem;
+  }
+  .image-card img {
+    height: 120px;
+  }
+  .marquee-content {
+    animation-duration: 20s;
+  }
 }
 
 @media (max-width: 576px) {
   /* Judul dan Teks Utama Lebih Kompak */
-
   .section-title {
     font-size: 1.8rem;
   }
@@ -1175,17 +1150,14 @@ AKHIR PERBAIKAN DESKTOP
     margin-bottom: 30px;
   }
 
-  /* ===== PERBAIKAN PENTING UNTUK HERO SECTION MOBILE (<= 576px) ===== */
-
+  /* HERO SECTION MOBILE */
   .hero-carousel {
     height: 85vh;
     margin-bottom: 0 !important;
   }
 
-  /* Menghapus padding-top yang menggeser teks ke bawah */
-
   .hero-content {
-    padding-top: 0; /* Dihapus dari 15vh agar sentrasi sempurna */
+    padding-top: 0;
   }
 
   .hero-title {
@@ -1224,27 +1196,16 @@ AKHIR PERBAIKAN DESKTOP
     font-size: 0.9rem;
   }
 
-  /* ===== AKHIR PERBAIKAN HERO SECTION MOBILE ===== */
-
   /* Memastikan About Section menempel erat di bawah Hero */
-
   .about-section {
     padding-top: 40px !important;
     margin-top: 0 !important;
   }
 
   /* Penyesuaian Lain */
-
   .service-card,
   .contact-form {
     padding: 20px 15px;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 40px;
-    height: 40px;
-    /* PERBAIKAN: Pastikan visibility jika diaktifkan */
   }
 
   .contact-item {
